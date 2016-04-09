@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11477900}
   - 114: {fileID: 11450660}
   - 114: {fileID: 11489048}
+  - 114: {fileID: 11440432}
   m_Layer: 9
   m_Name: Player 1
   m_TagString: Untagged
@@ -351,10 +352,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab05a263758fba4192b2f3218717799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ControlsEnabled: 1
   PlayerNumber: 0
   Speed: 80
   ThrustIncrement: 0.1
   ThrustForce: {x: 0, y: 0}
+--- !u!114 &11440432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0b819bea7bc884d94fe1c0e9d1b5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StunTime: 3
 --- !u!114 &11450660
 MonoBehaviour:
   m_ObjectHideFlags: 1
