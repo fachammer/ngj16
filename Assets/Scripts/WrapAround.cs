@@ -37,9 +37,11 @@ public class WrapAround : MonoBehaviour
 
     void Teleport(GameObject gameObject)
     {
+        print("teleporting"+gameObject.name);
+
         TeleportationMargin = Vector3.Scale(gameObject.GetComponent<CircleCollider2D>().bounds.size, gameObject.transform.localScale).magnitude;
         if(gameObject.layer == 8)//satellite (layer) fix
-            TeleportationMargin += 0.5f;
+            TeleportationMargin += 1.0f;
         else if(gameObject.layer == 9) //ufo
             TeleportationMargin -= 1.0f;
 
