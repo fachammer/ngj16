@@ -317,7 +317,7 @@ Transform:
   m_LocalScale: {x: 1.4812899, y: 1.48129, z: 1.48129}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1204763439
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e351ce198fd40c24dae09727b937babe, type: 2}
