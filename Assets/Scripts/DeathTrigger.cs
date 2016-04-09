@@ -5,13 +5,14 @@ public class DeathTrigger : MonoBehaviour
 {
     public LayerMask killObjectsOnLayers;
 
-    public void OnTriggerEnter2D(Collider2D collider)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if(!enabled) 
         {
             return;
         }
         
+        var collider = collision.collider;
         var incomingGameObject = collider.gameObject;
         var incomingLayerMask = (1 << incomingGameObject.layer);
         var layerIntersection = incomingLayerMask & killObjectsOnLayers.value;
