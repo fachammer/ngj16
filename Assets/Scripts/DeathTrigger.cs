@@ -1,18 +1,23 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 public class DeathTrigger : MonoBehaviour
 {
     public LayerMask killObjectsOnLayers;
+    
+    public float delay = 0f;
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private readonly Dictionary<Collider2D, Coroutine> delayCoroutines = new Dictionary<Collider2D, Coroutine>();
+
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         if(!enabled) 
         {
             return;
         }
         
-        var collider = collision.collider;
         var incomingGameObject = collider.gameObject;
         var incomingLayerMask = (1 << incomingGameObject.layer);
         var layerIntersection = incomingLayerMask & killObjectsOnLayers.value;
@@ -21,10 +26,23 @@ public class DeathTrigger : MonoBehaviour
         {
             return;
         }
-
+        
+        var deactivateCoroutine = StartCoroutine(DeactivateAfterDelay(incomingGameObject, collider));
+        delayCoroutines.Add(collider, deactivateCoroutine);
+    }
+    
+    private void OnTriggerExit2D(Collider2D collider) {
+        var delayCoroutine = delayCoroutines[collider];
+        StopCoroutine(delayCoroutine);
+        delayCoroutines.Remove(collider);
+    }
+    
+    private IEnumerator DeactivateAfterDelay(GameObject incomingGameObject, Collider2D collider) {
+        yield return new WaitForSeconds(delay);
         var player = incomingGameObject.GetComponent<Player>();
         Assert.IsNotNull(player);
         player.IsDead = true;
         incomingGameObject.SetActive(false);
+        delayCoroutines.Remove(collider);
     }
 }
