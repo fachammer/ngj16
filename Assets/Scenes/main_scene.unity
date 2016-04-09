@@ -351,7 +351,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -363,7 +363,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1402260196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1.4812899, y: 1.48129, z: 1.48129}
   m_Children: []
   m_Father: {fileID: 0}
@@ -391,7 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab05a263758fba4192b2f3218717799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  PlayerNumber: 0
+  Speed: 50
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
 --- !u!50 &1402260203
@@ -403,14 +404,14 @@ Rigidbody2D:
   m_GameObject: {fileID: 1402260196}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1658199206
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +487,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -498,7 +499,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1658199206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 1.4812899, y: 1.48129, z: 1.48129}
   m_Children: []
   m_Father: {fileID: 0}
@@ -512,14 +513,14 @@ Rigidbody2D:
   m_GameObject: {fileID: 1658199206}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1658199213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab05a263758fba4192b2f3218717799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  PlayerNumber: 1
+  Speed: 50
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
 --- !u!1 &1700273637
@@ -548,7 +550,7 @@ GameObject:
   - 33: {fileID: 1700273638}
   - 50: {fileID: 1700273643}
   m_Layer: 8
-  m_Name: Satellite
+  m_Name: Satellite 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
