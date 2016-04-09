@@ -38,18 +38,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
-        value: 0
-        inSlope: -1
-        outSlope: -1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: m_Color.r
     path: 
     classID: 212
     script: {fileID: 0}
@@ -58,18 +58,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
-        value: 0
-        inSlope: -1
-        outSlope: -1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: m_Color.g
     path: 
     classID: 212
     script: {fileID: 0}
@@ -78,38 +78,38 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
-        value: 0
-        inSlope: -1
-        outSlope: -1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: m_Color.b
     path: 
     classID: 212
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: 0.5
         value: 1
-        inSlope: -1
-        outSlope: -1
-        tangentMode: 10
+        inSlope: 0.0019795084
+        outSlope: 0.0019795084
+        tangentMode: 0
       - time: 1
         value: 0
-        inSlope: -1
-        outSlope: -1
+        inSlope: -2
+        outSlope: -2
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: m_Color.a
     path: 
     classID: 212
     script: {fileID: 0}
@@ -208,18 +208,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
-        value: 0
-        inSlope: -1
-        outSlope: -1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: m_Color.r
     path: 
     classID: 212
     script: {fileID: 0}
@@ -228,18 +228,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
-        value: 0
-        inSlope: -1
-        outSlope: -1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: m_Color.g
     path: 
     classID: 212
     script: {fileID: 0}
@@ -248,38 +248,38 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: -1
-        outSlope: -1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 1
-        value: 0
-        inSlope: -1
-        outSlope: -1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: m_Color.b
     path: 
     classID: 212
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: 0.5
         value: 1
-        inSlope: -1
-        outSlope: -1
-        tangentMode: 10
+        inSlope: 0.0019795084
+        outSlope: 0.0019795084
+        tangentMode: 0
       - time: 1
         value: 0
-        inSlope: -1
-        outSlope: -1
+        inSlope: -2
+        outSlope: -2
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: m_Color.a
     path: 
     classID: 212
     script: {fileID: 0}

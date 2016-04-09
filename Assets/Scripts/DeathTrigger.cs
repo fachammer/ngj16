@@ -33,7 +33,6 @@ public class DeathTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-
         Coroutine delayCoroutine;
         if (delayCoroutines.TryGetValue(collider, out delayCoroutine))
         {

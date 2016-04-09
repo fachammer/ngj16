@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1.4812899, y: 1.48129, z: 1.48129}
   m_Children:
   - {fileID: 423482}
@@ -104,7 +104,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: e99c5d353d17749eca35c62a6ade618e, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  leakSprite: {fileID: 0}
 --- !u!114 &11478194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leakedAnimation: {fileID: 11459862}
   leakedSound: {fileID: 8251564}
+  gameObjectDisableDelay: 1.5
 --- !u!114 &11479624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,10 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab05a263758fba4192b2f3218717799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNumber: 0
+  PlayerNumber: 3
   Speed: 80
-  MaximumSpeed: 20
-  LimitingSpeed: 0
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
 --- !u!212 &21238682
