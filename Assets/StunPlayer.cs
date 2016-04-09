@@ -41,7 +41,7 @@ public class StunPlayer : MonoBehaviour {
 
             if(veldif > StunVelocityTreshold)
             {
-                print(this.gameObject.name + ":i am faster so take that, veldif" + veldif);
+                //print(this.gameObject.name + ":i am faster so take that, veldif" + veldif);
                 other.gameObject.GetComponent<StunPlayer>().Stun();
             }
             else
