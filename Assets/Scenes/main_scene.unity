@@ -454,6 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerNumber: 0
   Speed: 50
+  MaximumSpeed: 5
+  LimitingSpeed: 0
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
 --- !u!50 &1402260203
@@ -473,6 +475,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1001 &1482011711
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 471564, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e351ce198fd40c24dae09727b937babe, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1658199206
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +639,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerNumber: 1
   Speed: 50
+  MaximumSpeed: 5
+  LimitingSpeed: 0
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
 --- !u!1 &1700273637
@@ -903,7 +949,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
