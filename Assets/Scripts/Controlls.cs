@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Controlls : MonoBehaviour
 {
-    public enum PlayerNo {ONE, TWO, THREE, FOUR };
-    public PlayerNo PlayerNumber = PlayerNo.ONE;
+    public enum PlayerNo {WSAD, ARROWS, XBOX, NUM };
+    public PlayerNo PlayerNumber = PlayerNo.WSAD;
 
     public float Speed = 100.0f;
     public float MaximumSpeed = 5.0f;
@@ -28,7 +28,7 @@ public class Controlls : MonoBehaviour
         float RightY = 0.0f;
         float RightX = 0.0f;
 
-        if(PlayerNumber == PlayerNo.ONE)
+        if(PlayerNumber == PlayerNo.WSAD)
         {
             if(Input.GetKey(KeyCode.A))
                 RightX = -1.0f;
@@ -40,7 +40,7 @@ public class Controlls : MonoBehaviour
             if(Input.GetKey(KeyCode.S))
                 RightY = 1.0f;
         }
-        else if(PlayerNumber == PlayerNo.TWO)
+        else if(PlayerNumber == PlayerNo.ARROWS)
         {
             if(Input.GetKey(KeyCode.LeftArrow))
                 RightX = -1.0f;
@@ -52,7 +52,24 @@ public class Controlls : MonoBehaviour
             if(Input.GetKey(KeyCode.DownArrow))
                 RightY = 1.0f;
         }
-        
+        else if(PlayerNumber == PlayerNo.XBOX)
+        {
+            RightX = Input.GetAxis("Horizontal");
+            RightY = Input.GetAxis("Vertical");
+            RightY = -RightY;
+        }else if(PlayerNumber == PlayerNo.NUM)
+        {
+            if(Input.GetKey(KeyCode.Keypad1))
+                RightX = -1.0f;
+            if(Input.GetKey(KeyCode.Keypad3))
+                RightX = 1.0f;
+
+            if(Input.GetKey(KeyCode.Keypad5))
+                RightY = -1.0f;
+            if(Input.GetKey(KeyCode.Keypad2))
+                RightY = 1.0f;
+        }
+
 
         Vector2 inputAxis = new Vector2(RightX, -RightY);
 
@@ -79,16 +96,8 @@ public class Controlls : MonoBehaviour
         float speed = Vector3.Magnitude (_rigidBody.velocity);
         if(speed > MaximumSpeed)
         {
-            //print("S"+speed+" ms:"+MaximumSpeed);
             LimitingSpeed = true;
-            //float brakeSpeed = speed - MaximumSpeed;  // calculate the speed decrease
-
-            //Vector3 normalisedVelocity = _rigidBody.velocity.normalized;
-            //Vector3 brakeVelocity = normalisedVelocity * brakeSpeed;  // make the brake Vector3 value
-
             _rigidBody.velocity = Vector3.ClampMagnitude(_rigidBody.velocity, MaximumSpeed);
-
-            //_rigidBody.AddForce(-brakeVelocity);  // apply opposing brake force
         }
         else
         {
