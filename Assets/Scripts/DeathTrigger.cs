@@ -48,6 +48,13 @@ public class DeathTrigger : MonoBehaviour
         var player = incomingGameObject.GetComponent<Player>();
         Assert.IsNotNull(player);
         player.IsDead = true;
+        
+        var leakedHandler = incomingGameObject.GetComponent<LeakedHandler>();
+        if(leakedHandler != null) 
+        {
+            leakedHandler.Trigger();
+        }
+        
         delayCoroutines.Remove(collider);
     }
 }
