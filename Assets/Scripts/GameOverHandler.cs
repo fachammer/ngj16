@@ -30,7 +30,8 @@ public class GameOverHandler : MonoBehaviour
         {
             component.enabled = false;
         }
-
+        
+        gameOverScreen.SetWinningPlayer(winningPlayer);
         gameRestartController.enabled = true;
     }
 }

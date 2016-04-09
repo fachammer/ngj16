@@ -4,7 +4,7 @@ public class Player : MonoBehaviour {
     
     public int id;
     
-    public Sprite leakSprite;
+    public Sprite winSprite;
     
     public bool IsDead { get; set; }
     

@@ -7,39 +7,34 @@ public class GameOverScreen : MonoBehaviour {
     
     public float appearDelay;
     
-    public Canvas winCanvas;
-    public Canvas leakCanvas;
+    public float soundDelay;
     
+    public Canvas winCanvas;
     public Image leakImage;
     public Text text;
     
+    public Animator fadeAnimator;
+    
+    public AudioSource newspaperAppearSound;
+    
     private void Awake() {
         Assert.IsNotNull(winCanvas);
-        Assert.IsNotNull(leakCanvas);
+        Assert.IsNotNull(fadeAnimator);
+        Assert.IsNotNull(leakImage);
+        Assert.IsNotNull(text);
         winCanvas.enabled = false;
-        leakCanvas.enabled = false;
     }
-    
-    private IEnumerator ShowWinCanvas(Player player) {
-        yield return ShowCanvas(player, winCanvas, appearDelay);
-        text.text = string.Format("Player {0} wins", player.id + 1);
+   
+    public void SetWinningPlayer(Player player) {
+        StartCoroutine(SetWinningPlayerDelayed(player, appearDelay));
     }
-    
-    private static IEnumerator ShowCanvas(Player player, Canvas canvas, float delay) {
+ 
+    private IEnumerator SetWinningPlayerDelayed(Player player, float delay) {
+        newspaperAppearSound.PlayDelayed(soundDelay);
         yield return new WaitForSeconds(delay);
-        canvas.enabled = true;
-    }
-    
-    private IEnumerator ShowLeakCanvas(Player player) {
-        leakImage.sprite = player.leakSprite;
-        yield return ShowCanvas(player, leakCanvas, appearDelay);
-    }
-    
-    public IEnumerator SetWinningPlayer(Player player) {
-        yield return ShowWinCanvas(player);
-    }
-    
-    public IEnumerator SetLeakedPlayer(Player player) {
-        yield return ShowLeakCanvas(player);
-    }
+        winCanvas.enabled = true;
+        text.text = string.Format("Player {0} wins", player.id + 1);
+        leakImage.sprite = player.winSprite;
+        fadeAnimator.SetTrigger("FadeIn");
+    }   
 }

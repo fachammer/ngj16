@@ -9,7 +9,6 @@ public class GameplayManager : MonoBehaviour
 
     private Player winningPlayer;
 
-    public event Action<Player> PlayerLoses = delegate { };
     public event Action<Player> PlayerWins = delegate { };
 
     private List<Player> remainingPlayers;
@@ -33,11 +32,7 @@ public class GameplayManager : MonoBehaviour
         }
 
         var diedPlayers = remainingPlayers.Where(p => p.IsDead).ToList();
-        
-        foreach(var diedPlayer in diedPlayers) {
-            remainingPlayers.Remove(diedPlayer);
-            PlayerLoses(diedPlayer);
-        }
+        remainingPlayers.RemoveAll(diedPlayers.Contains);
         
         if(remainingPlayers.Count == 1) {
             winningPlayer = remainingPlayers.First();
