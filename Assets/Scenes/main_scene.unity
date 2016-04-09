@@ -453,8 +453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumber: 0
-  Speed: 50
-  MaximumSpeed: 5
+  Speed: 80
+  MaximumSpeed: 20
   LimitingSpeed: 0
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumber: 1
-  Speed: 50
-  MaximumSpeed: 5
+  Speed: 80
+  MaximumSpeed: 20
   LimitingSpeed: 0
   ThrustIncrement: 0.01
   ThrustForce: {x: 0, y: 0}
