@@ -40,12 +40,16 @@ public class WrapAround : MonoBehaviour {
         TeleportationMargin = gameObject.GetComponent<CircleCollider2D>().bounds.size.magnitude;
         if(this.gameObject.name == "LeftEdge" || this.gameObject.name == "RightEdge")
         {
-            float newX = _destination.transform.position.x;;
+            float newX = _destination.transform.position.x;
             newX += (this.gameObject.name == "LeftEdge") ? -TeleportationMargin : TeleportationMargin;
             gameObject.transform.position = new Vector3(newX, gameObject.transform.position.y, gameObject.transform.position.z);
         }
         else if(this.gameObject.name == "TopEdge" || this.gameObject.name == "BottomEdge")
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, _destination.transform.position.y, gameObject.transform.position.z);
+        {
+            float newY = _destination.transform.position.y;
+            newY += (this.gameObject.name == "TopEdge") ? TeleportationMargin : -TeleportationMargin;
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, newY, gameObject.transform.position.z);
+        }
         else
             Debug.LogWarning("bad name for the edges");
     }
