@@ -5,14 +5,6 @@ public class DeathTrigger : MonoBehaviour
 {
     public LayerMask killObjectsOnLayers;
 
-    private GameplayManager gameplayManager;
-
-    private void Awake()
-    {
-        gameplayManager = GameplayManager.Instance;
-        gameplayManager.PlayerWins += _ => enabled = false;
-    }
-
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if(!enabled) 

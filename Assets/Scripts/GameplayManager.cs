@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Linq;
 using System;
-using UnityEngine.Assertions;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -11,8 +10,6 @@ public class GameplayManager : MonoBehaviour
 
     public event Action<Player> PlayerWins = delegate { };
 
-    public static GameplayManager Instance { get; private set; }
-
     private void Awake()
     {
         winningPlayer = null;
@@ -20,9 +17,6 @@ public class GameplayManager : MonoBehaviour
         {
             players[i].id = i;
         }
-        
-        Assert.IsNull(Instance);
-        Instance = this;
     }
 
     private void Update()

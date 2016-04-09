@@ -11,11 +11,9 @@ public class GameOverScreen : MonoBehaviour {
     private void Awake() {
         Assert.IsNotNull(canvas);
         canvas.enabled = false;
-        
-        GameplayManager.Instance.PlayerWins += SetWinningPlayer;
     }
     
-    private void SetWinningPlayer(Player player) {
+    public void SetWinningPlayer(Player player) {
         canvas.enabled = true;
         text.text = string.Format("Player {0} wins", player.id + 1);
     }
