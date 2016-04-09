@@ -15,8 +15,8 @@ GameObject:
   - 114: {fileID: 11429780}
   - 50: {fileID: 5016862}
   - 114: {fileID: 11423466}
-  - 61: {fileID: 6182468}
-  - 61: {fileID: 6130338}
+  - 61: {fileID: 6112558}
+  - 114: {fileID: 11477900}
   m_Layer: 9
   m_Name: Player 1
   m_TagString: Untagged
@@ -164,21 +164,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
   m_Radius: 1.1
---- !u!61 &6130338
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110582}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06e5a83db13864410b7cb2ecb54cabeb, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 3, y: 1}
---- !u!61 &6182468
+--- !u!61 &6112558
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -249,6 +235,19 @@ MonoBehaviour:
   Speed: 80
   ThrustIncrement: 0.1
   ThrustForce: {x: 0, y: 0}
+--- !u!114 &11477900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4cdea568c3348c5b810650dc82483a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 130246, guid: 42beeb1c34d034d5481c06c3c07f490c, type: 2}
+  particleDestroyDelay: 0.2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
