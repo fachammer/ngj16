@@ -6,11 +6,16 @@ using UnityEngine.Assertions;
 public class GameOverHandler : MonoBehaviour {
     
     public GameplayManager gameplayManager;
+    
     public GameOverScreen gameOverScreen;
+    
+    public GameRestartController gameRestartController;
     
     private void Awake() {
         Assert.IsNotNull(gameOverScreen);
         Assert.IsNotNull(gameplayManager);
+        Assert.IsNotNull(gameRestartController);
+        gameRestartController.enabled = false;
         gameplayManager.PlayerWins += OnPlayerWins;
     }
     
@@ -24,5 +29,6 @@ public class GameOverHandler : MonoBehaviour {
         }
         
         gameOverScreen.SetWinningPlayer(winningPlayer);
+        gameRestartController.enabled = true;
     }
 }
