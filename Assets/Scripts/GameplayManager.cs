@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameplayManager : MonoBehaviour
 
     public event Action<Player> PlayerWins = delegate { };
 
+    private List<Player> remainingPlayers;
+
     private void Awake()
     {
         winningPlayer = null;
@@ -17,6 +20,8 @@ public class GameplayManager : MonoBehaviour
         {
             players[i].id = i;
         }
+        
+        remainingPlayers = new List<Player>(players);
     }
 
     private void Update()
@@ -26,15 +31,11 @@ public class GameplayManager : MonoBehaviour
             return;
         }
 
-        var deadPlayers = players.Where(p => p.IsDead);
-        if (deadPlayers.Count() == players.Length)
-        {
-            return;
-        }
-
-        if (deadPlayers.Count() >= players.Length - 1)
-        {
-            winningPlayer = players.Where(p => !p.IsDead).First();
+        var diedPlayers = remainingPlayers.Where(p => p.IsDead).ToList();
+        remainingPlayers.RemoveAll(diedPlayers.Contains);
+        
+        if(remainingPlayers.Count == 1) {
+            winningPlayer = remainingPlayers.First();
             PlayerWins(winningPlayer);
         }
     }
