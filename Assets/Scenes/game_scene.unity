@@ -271,40 +271,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1329645375}
   m_Script: {fileID: 11500000, guid: 506594310f61e4f9a82c3e23fad3ec8d, type: 3}
---- !u!1 &741229531
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 741229532}
-  m_Layer: 0
-  m_Name: C (1)
-  m_TagString: SpawnPointBottom
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &741229532
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 741229531}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9, y: -6.23, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1251709931}
-  m_RootOrder: 5
---- !u!114 &821536674 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11410514, guid: d064ce4d8acb947fc9c429584face659,
-    type: 2}
-  m_PrefabInternal: {fileID: 155092194}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1001 &932324443
+--- !u!1001 &700865095
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -343,9 +310,47 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11412850, guid: cb946cc00ab1a8a4997cd54ab5404bbf, type: 2}
+      propertyPath: winSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f512b4d8a98c4419a1f334cf3ef1106,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb946cc00ab1a8a4997cd54ab5404bbf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &741229531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 741229532}
+  m_Layer: 0
+  m_Name: C (1)
+  m_TagString: SpawnPointBottom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &741229532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741229531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.9, y: -6.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1251709931}
+  m_RootOrder: 5
+--- !u!114 &821536674 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11410514, guid: d064ce4d8acb947fc9c429584face659,
+    type: 2}
+  m_PrefabInternal: {fileID: 155092194}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &985436535
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +645,7 @@ Prefab:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11412850, guid: cb946cc00ab1a8a4997cd54ab5404bbf,
     type: 2}
-  m_PrefabInternal: {fileID: 932324443}
+  m_PrefabInternal: {fileID: 700865095}
   m_Script: {fileID: 11500000, guid: fa24577012c15469fb33b6acd67be2b5, type: 3}
 --- !u!1001 &1482011711
 Prefab:
@@ -788,7 +793,7 @@ Prefab:
     - target: {fileID: 11412850, guid: cb946cc00ab1a8a4997cd54ab5404bbf, type: 2}
       propertyPath: winSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 567827dff04844dfc8df1d1992beb4bf,
+      objectReference: {fileID: 21300000, guid: 181d65468b6cc4b3981fb49690e85669,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb946cc00ab1a8a4997cd54ab5404bbf, type: 2}
