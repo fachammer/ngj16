@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Controlls : MonoBehaviour
 {
+    public enum PlayerNo {ONE, TWO, THREE, FOUR };
+    public PlayerNo PlayerNumber = PlayerNo.ONE;
+
     public float Speed = 100.0f;
     public float ThrustIncrement = 0.01f;
     public Vector2 ThrustForce;
@@ -23,15 +26,31 @@ public class Controlls : MonoBehaviour
         float RightY = 0.0f;
         float RightX = 0.0f;
 
-        if(Input.GetKey(KeyCode.A))
-            RightX = -1.0f;       
-        if(Input.GetKey(KeyCode.D))
-            RightX = 1.0f;
+        if(PlayerNumber == PlayerNo.ONE)
+        {
+            if(Input.GetKey(KeyCode.A))
+                RightX = -1.0f;
+            if(Input.GetKey(KeyCode.D))
+                RightX = 1.0f;
 
-        if(Input.GetKey(KeyCode.W))
-            RightY = -1.0f;
-        if(Input.GetKey(KeyCode.S))
-            RightY = 1.0f;
+            if(Input.GetKey(KeyCode.W))
+                RightY = -1.0f;
+            if(Input.GetKey(KeyCode.S))
+                RightY = 1.0f;
+        }
+        else if(PlayerNumber == PlayerNo.TWO)
+        {
+            if(Input.GetKey(KeyCode.LeftArrow))
+                RightX = -1.0f;
+            if(Input.GetKey(KeyCode.RightArrow))
+                RightX = 1.0f;
+
+            if(Input.GetKey(KeyCode.UpArrow))
+                RightY = -1.0f;
+            if(Input.GetKey(KeyCode.DownArrow))
+                RightY = 1.0f;
+        }
+        
 
         Vector2 inputAxis = new Vector2(RightX, -RightY);
 
