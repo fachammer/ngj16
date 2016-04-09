@@ -1,0 +1,270 @@
+fileFormatVersion: 2
+guid: e3eadf36e226f4ed5b743e0898c28dc5
+timeCreated: 1460232129
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: effect_bump_spritesheet_0
+    21300002: effect_bump_spritesheet_1
+    21300004: effect_bump_spritesheet_2
+    21300006: effect_bump_spritesheet_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: effect_bump_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: -231}
+        - {x: 82, y: -231}
+        - {x: 82, y: -191}
+        - {x: 75, y: -86}
+        - {x: 72, y: -77}
+        - {x: -3, y: -77}
+        - {x: -21, y: -78}
+      - - {x: 43, y: -201}
+        - {x: 46, y: -204}
+        - {x: 49, y: -203}
+        - {x: 49, y: -201}
+        - {x: 46, y: -198}
+        - {x: 44, y: -198}
+      - - {x: 16, y: -169}
+        - {x: 19, y: -172}
+        - {x: 22, y: -171}
+        - {x: 22, y: -169}
+        - {x: 19, y: -166}
+        - {x: 17, y: -166}
+      - - {x: -60, y: -24}
+        - {x: -68, y: -52}
+        - {x: -68, y: -63}
+        - {x: -38, y: -85}
+        - {x: -27, y: -85}
+        - {x: 1, y: -68}
+        - {x: 1, y: -46}
+        - {x: -3, y: -24}
+      - - {x: -10, y: -68}
+        - {x: -13, y: -71}
+        - {x: -13, y: -72}
+        - {x: -9, y: -76}
+        - {x: -8, y: -76}
+        - {x: -5, y: -73}
+        - {x: -5, y: -72}
+        - {x: -9, y: -68}
+    - name: effect_bump_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 98}
+        - {x: -76, y: 0}
+        - {x: -76, y: -130}
+        - {x: 79, y: -208}
+        - {x: 96, y: -216}
+        - {x: 102, y: -216}
+        - {x: 119, y: -176}
+        - {x: 119, y: 7}
+        - {x: 69, y: 98}
+      - - {x: 101, y: -2}
+        - {x: 101, y: -51}
+        - {x: 104, y: -58}
+        - {x: 119, y: -58}
+        - {x: 131, y: -44}
+        - {x: 144, y: -29}
+        - {x: 144, y: -2}
+      - - {x: 111, y: -40}
+        - {x: 114, y: -39}
+        - {x: 114, y: -36}
+        - {x: 111, y: -35}
+        - {x: 109, y: -37}
+      - - {x: -108, y: 34}
+        - {x: -112, y: 30}
+        - {x: -112, y: 21}
+        - {x: -110, y: 20}
+        - {x: -107, y: 20}
+        - {x: -104, y: 23}
+        - {x: -103, y: 29}
+        - {x: -103, y: 34}
+      - - {x: -150, y: 140}
+        - {x: -173, y: 131}
+        - {x: -181, y: 105}
+        - {x: -181, y: 47}
+        - {x: -147, y: 24}
+        - {x: -109, y: 24}
+        - {x: -67, y: 53}
+        - {x: -65, y: 55}
+        - {x: -65, y: 117}
+        - {x: -78, y: 140}
+    - name: effect_bump_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: 60}
+        - {x: 17, y: 112}
+        - {x: 13, y: 113}
+        - {x: 7, y: 113}
+        - {x: 5, y: 111}
+        - {x: 7, y: 78}
+        - {x: 22, y: -22}
+        - {x: 25, y: -37}
+        - {x: 26, y: -38}
+        - {x: 26, y: -40}
+        - {x: 26, y: -38}
+        - {x: 22, y: -33}
+        - {x: 16, y: -35}
+        - {x: -25, y: -26}
+        - {x: -30, y: -27}
+        - {x: -30, y: -33}
+        - {x: 5, y: -85}
+        - {x: 84, y: -183}
+        - {x: 95, y: -183}
+        - {x: 139, y: -62}
+        - {x: 139, y: -28}
+        - {x: 134, y: -26}
+      - - {x: 137, y: 69}
+        - {x: 125, y: 64}
+        - {x: 124, y: 60}
+        - {x: 124, y: 51}
+        - {x: 130, y: 37}
+        - {x: 144, y: 37}
+        - {x: 153, y: 42}
+        - {x: 153, y: 69}
+      - - {x: -167, y: 124}
+        - {x: -165, y: 122}
+        - {x: -162, y: 123}
+        - {x: -162, y: 126}
+        - {x: -164, y: 128}
+        - {x: -167, y: 127}
+      - - {x: -132, y: 208}
+        - {x: -156, y: 208}
+        - {x: -181, y: 185}
+        - {x: -181, y: 136}
+        - {x: -179, y: 123}
+        - {x: -97, y: 123}
+        - {x: -93, y: 152}
+        - {x: -93, y: 188}
+        - {x: -101, y: 193}
+      - - {x: -104, y: 125}
+        - {x: -101, y: 126}
+        - {x: -101, y: 129}
+        - {x: -104, y: 130}
+        - {x: -106, y: 128}
+    - name: effect_bump_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99, y: 48}
+        - {x: 86, y: 24}
+        - {x: 61, y: 127}
+        - {x: 59, y: 130}
+        - {x: 35, y: 130}
+        - {x: 7, y: 85}
+        - {x: 7, y: -8}
+        - {x: 46, y: -111}
+        - {x: 72, y: -111}
+        - {x: 74, y: -110}
+        - {x: 92, y: -32}
+        - {x: 105, y: 34}
+        - {x: 105, y: 44}
+      - - {x: 76, y: 106}
+        - {x: 76, y: 99}
+        - {x: 82, y: 99}
+        - {x: 83, y: 100}
+        - {x: 83, y: 107}
+        - {x: 80, y: 108}
+      - - {x: 40, y: 134}
+        - {x: 42, y: 132}
+        - {x: 45, y: 133}
+        - {x: 45, y: 136}
+        - {x: 43, y: 138}
+        - {x: 40, y: 137}
+      - - {x: -144, y: 238}
+        - {x: -155, y: 222}
+        - {x: -155, y: 199}
+        - {x: -152, y: 192}
+        - {x: -120, y: 192}
+        - {x: -118, y: 193}
+        - {x: -115, y: 200}
+        - {x: -115, y: 221}
+        - {x: -139, y: 238}
+      - - {x: -164, y: 208}
+        - {x: -164, y: 206}
+        - {x: -162, y: 204}
+        - {x: -157, y: 204}
+        - {x: -154, y: 207}
+        - {x: -155, y: 210}
+        - {x: -160, y: 211}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
