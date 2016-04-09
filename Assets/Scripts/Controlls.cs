@@ -7,8 +7,6 @@ public class Controlls : MonoBehaviour
     public PlayerNo PlayerNumber = PlayerNo.WSAD;
 
     public float Speed = 100.0f;
-    public float MaximumSpeed = 5.0f;
-    public bool LimitingSpeed;//flag whether we currently limit the speed or not
     public float ThrustIncrement = 0.01f;
     public Vector2 ThrustForce;
 
@@ -91,18 +89,5 @@ public class Controlls : MonoBehaviour
     void FixedUpdate()
     {
         _rigidBody.AddRelativeForce(_thrustForce);
-
-        //limit velocity
-        float speed = Vector3.Magnitude (_rigidBody.velocity);
-        if(speed > MaximumSpeed)
-        {
-            LimitingSpeed = true;
-            _rigidBody.velocity = Vector3.ClampMagnitude(_rigidBody.velocity, MaximumSpeed);
-        }
-        else
-        {
-            LimitingSpeed = false;
-        }
-
     }
 }
