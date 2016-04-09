@@ -48,7 +48,6 @@ public class DeathTrigger : MonoBehaviour
         var player = incomingGameObject.GetComponent<Player>();
         Assert.IsNotNull(player);
         player.IsDead = true;
-        incomingGameObject.SetActive(false);
         delayCoroutines.Remove(collider);
     }
 }
