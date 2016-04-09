@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Controlls : MonoBehaviour
 {
+    public bool ControlsEnabled = true;
     public enum PlayerNo {WSAD, ARROWS, XBOX, NUM };
     public PlayerNo PlayerNumber = PlayerNo.WSAD;
 
@@ -23,6 +24,9 @@ public class Controlls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!ControlsEnabled)
+            return;
+
         float RightY = 0.0f;
         float RightX = 0.0f;
 
