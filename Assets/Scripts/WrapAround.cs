@@ -37,7 +37,7 @@ public class WrapAround : MonoBehaviour
 
     void Teleport(GameObject gameObject)
     {
-        TeleportationMargin = gameObject.GetComponent<CircleCollider2D>().bounds.size.magnitude;
+        TeleportationMargin = Vector3.Scale(gameObject.GetComponent<CircleCollider2D>().bounds.size, gameObject.transform.localScale).magnitude;
         if (this.gameObject.name == "LeftEdge" || this.gameObject.name == "RightEdge")
         {
             float newX = _destination.transform.position.x;
