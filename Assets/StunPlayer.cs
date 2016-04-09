@@ -4,7 +4,7 @@ using System.Collections;
 public class StunPlayer : MonoBehaviour {
 
     float StunVelocityTreshold = 16.0f;
-    public float StunTime = 3.0f;
+    float StunTime = 1.5f;
 
     private Rigidbody2D _rigidBody;
     private Controlls _controlls;
