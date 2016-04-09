@@ -47,6 +47,7 @@ GameObject:
   - 4: {fileID: 417554}
   - 50: {fileID: 5083842}
   - 114: {fileID: 11431936}
+  - 114: {fileID: 11485936}
   m_Layer: 8
   m_Name: Satellite 1
   m_TagString: Untagged
@@ -166,7 +167,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148400}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -232,6 +233,19 @@ MonoBehaviour:
   minAppliedForce: 140
   maxAppliedForce: 140
   movingObject: {fileID: 5083842}
+--- !u!114 &11485936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892631bf8e871e442929110327112d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaximumSpeed: 5
+  LimitingSpeed: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
