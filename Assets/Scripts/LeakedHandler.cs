@@ -19,14 +19,12 @@ public class LeakedHandler : MonoBehaviour {
         if(killingTrigger)
         {
             leakedSound.Play();
-
             StartCoroutine(DisableGameObjectAfterDelay(gameObjectDisableDelay));
         }
     }
     
     private IEnumerator DisableGameObjectAfterDelay(float delay) {
         yield return new WaitForSeconds(delay);
-        print("disabling"+gameObject.name);
         gameObject.SetActive(false);
     }
 }
