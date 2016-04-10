@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.Assertions;
+using System.Collections;
 
 public class LeakedHandler : MonoBehaviour {
     
     public LeakedNotificationAnimation leakedAnimation;
     public AudioSource leakedSound;
+    public float gameObjectDisableDelay;
     
     private void Awake() {
         Assert.IsNotNull(leakedAnimation);
@@ -14,5 +16,11 @@ public class LeakedHandler : MonoBehaviour {
     public void Trigger() {
         leakedAnimation.Trigger();
         leakedSound.Play();
+        StartCoroutine(DisableGameObjectAfterDelay(gameObjectDisableDelay));
+    }
+    
+    private IEnumerator DisableGameObjectAfterDelay(float delay) {
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
     }
 }
