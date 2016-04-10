@@ -387,10 +387,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11491848, guid: 8328b6982ce3c45cbbe1a3893fc933d6, type: 2}
-      propertyPath: componentsToEnable.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 480492, guid: 8328b6982ce3c45cbbe1a3893fc933d6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -459,14 +455,6 @@ Prefab:
       propertyPath: audioSourcesToDeactivate.Array.data[1]
       value: 
       objectReference: {fileID: 1594376902}
-    - target: {fileID: 11424994, guid: 8328b6982ce3c45cbbe1a3893fc933d6, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491848, guid: 8328b6982ce3c45cbbe1a3893fc933d6, type: 2}
-      propertyPath: componentsToEnable.Array.data[0]
-      value: 
-      objectReference: {fileID: 1738772056}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8328b6982ce3c45cbbe1a3893fc933d6, type: 2}
   m_IsPrefabParent: 0
@@ -729,12 +717,6 @@ Animator:
   m_PrefabParentObject: {fileID: 9577400, guid: d064ce4d8acb947fc9c429584face659,
     type: 2}
   m_PrefabInternal: {fileID: 1659969783}
---- !u!114 &1738772056 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11424994, guid: 8328b6982ce3c45cbbe1a3893fc933d6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1329645375}
-  m_Script: {fileID: 11500000, guid: 5a4eb616220687d458533d8bc1ac85b5, type: 3}
 --- !u!114 &1738772058 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11491848, guid: 8328b6982ce3c45cbbe1a3893fc933d6,
