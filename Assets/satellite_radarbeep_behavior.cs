@@ -23,7 +23,7 @@ public class satellite_radarbeep_behavior : MonoBehaviour {
         // gameObject.renderer.material.color.a;
         
         a -= 0.02f;
-        Debug.Log(a);
+        //Debug.Log(a);
         spr.material.color = new Color(spr.material.color.r, spr.material.color.g, spr.material.color.b, a);
         if (a <= 0) {
             Destroy(gameObject);

@@ -34,8 +34,8 @@ public class satellite_beep_spawner : MonoBehaviour {
         }
 
         if (bleep) { 
-        bleep.transform.position = followObject.transform.position;
-    }
+            bleep.transform.position = followObject.transform.position;
+        }
     }
 
 }

@@ -33,6 +33,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &121354
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 410294}
+  - 58: {fileID: 5814882}
+  - 114: {fileID: 11487104}
+  m_Layer: 10
+  m_Name: Death Trigger Range
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &123790
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +214,7 @@ GameObject:
   - 58: {fileID: 5806868}
   - 114: {fileID: 11470778}
   m_Layer: 10
-  m_Name: Death Trigger Range
+  m_Name: Warning Trigger Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,6 +238,18 @@ Transform:
   - {fileID: 446166}
   m_Father: {fileID: 456792}
   m_RootOrder: 0
+--- !u!4 &410294
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 456792}
+  m_RootOrder: 1
 --- !u!4 &446166
 Transform:
   m_ObjectHideFlags: 1
@@ -268,8 +297,9 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 405120}
-  - {fileID: 464082}
+  - {fileID: 410294}
   - {fileID: 455534}
+  - {fileID: 464082}
   m_Father: {fileID: 460852}
   m_RootOrder: 1
 --- !u!4 &460852
@@ -297,7 +327,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 456792}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &466292
 Transform:
   m_ObjectHideFlags: 1
@@ -617,9 +647,23 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 2
+--- !u!58 &5814882
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121354}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.5}
+  serializedVersion: 2
+  m_Radius: 0.7
 --- !u!58 &5883850
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -631,9 +675,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.5}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
 --- !u!95 &9558568
 Animator:
   serializedVersion: 3
@@ -664,6 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beep: {fileID: 128594, guid: 8258962722b40fe468d4eab685722fbf, type: 2}
   spawnDelay: 1.5
+  chasing: 0
 --- !u!114 &11470778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,6 +724,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   delay: 0
+  TriggerDeath: 0
 --- !u!114 &11476292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -704,13 +750,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+--- !u!114 &11487104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775a27688a5c24d6f85d61a13bf8a1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killObjectsOnLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  delay: 0
+  TriggerDeath: 1
 --- !u!114 &11488458
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf46698e119ec43c8ad9e9b64e9c0e67, type: 3}
   m_Name: 
