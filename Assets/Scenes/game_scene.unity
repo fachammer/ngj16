@@ -330,6 +330,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 85d551841276544ab83c9a54fd8f6857, type: 2}
+    - target: {fileID: 11429780, guid: cb946cc00ab1a8a4997cd54ab5404bbf, type: 2}
+      propertyPath: PlayerNumber
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb946cc00ab1a8a4997cd54ab5404bbf, type: 2}
   m_IsPrefabParent: 0
@@ -849,6 +853,7 @@ GameObject:
   - 124: {fileID: 1886324339}
   - 81: {fileID: 1886324338}
   - 114: {fileID: 1886324343}
+  - 45: {fileID: 1886324344}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -938,6 +943,14 @@ MonoBehaviour:
   ShakeAmountX: 0.4
   ShakeAmountY: 0.4
   StartShake: 0
+--- !u!45 &1886324344
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886324337}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 3a75757e3adf1471296c292dc06d6b28, type: 2}
 --- !u!1 &1970514530
 GameObject:
   m_ObjectHideFlags: 0

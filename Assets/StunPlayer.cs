@@ -4,7 +4,7 @@ using System.Collections;
 public class StunPlayer : MonoBehaviour {
 
     float StunVelocityTreshold = 16.0f;
-    public float StunTime = 3.0f;
+    float StunTime = 1.5f;
 
     private Rigidbody2D _rigidBody;
     private Controlls _controlls;
@@ -41,7 +41,7 @@ public class StunPlayer : MonoBehaviour {
 
             if(veldif > StunVelocityTreshold)
             {
-                print(this.gameObject.name + ":i am faster so take that, veldif" + veldif);
+                //print(this.gameObject.name + ":i am faster so take that, veldif" + veldif);
                 other.gameObject.GetComponent<StunPlayer>().Stun();
             }
             else

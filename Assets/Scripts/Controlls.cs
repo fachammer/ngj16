@@ -10,15 +10,22 @@ public class Controlls : MonoBehaviour
     public float Speed = 100.0f;
     public float ThrustIncrement = 0.01f;
     public Vector2 ThrustForce;
+    public float BoostAmount = 100.0f;
+    public float Drag = 0.85f;
 
     private Vector2 _thrustForce;
     private Rigidbody2D _rigidBody;
     private float _thrust = 0.0f;
 
+    private LimitVelocity _limitVelocity;
+    private bool _boosted = false;
+    private bool _temporalBoost = false;
+
     // Use this for initialization
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        _limitVelocity = GetComponent<LimitVelocity>();
     }
 
     // Update is called once per frame
@@ -41,6 +48,9 @@ public class Controlls : MonoBehaviour
                 RightY = -1.0f;
             if(Input.GetKey(KeyCode.S))
                 RightY = 1.0f;
+
+            if(Input.GetKey(KeyCode.E))
+                Boost();
         }
         else if(PlayerNumber == PlayerNo.ARROWS)
         {
@@ -53,12 +63,19 @@ public class Controlls : MonoBehaviour
                 RightY = -1.0f;
             if(Input.GetKey(KeyCode.DownArrow))
                 RightY = 1.0f;
+
+            if(Input.GetKey(KeyCode.RightControl))
+                Boost();
         }
         else if(PlayerNumber == PlayerNo.XBOX)
         {
             RightX = Input.GetAxis("Horizontal");
             RightY = Input.GetAxis("Vertical");
             RightY = -RightY;
+
+            if(Input.GetButton("Fire1"))
+                Boost();
+
         }else if(PlayerNumber == PlayerNo.NUM)
         {
             if(Input.GetKey(KeyCode.Keypad1))
@@ -70,6 +87,9 @@ public class Controlls : MonoBehaviour
                 RightY = -1.0f;
             if(Input.GetKey(KeyCode.Keypad2))
                 RightY = 1.0f;
+
+            if(Input.GetKey(KeyCode.Keypad6))
+                Boost();
         }
 
 
@@ -90,8 +110,37 @@ public class Controlls : MonoBehaviour
         ThrustForce = _thrustForce;
     }
 
+    void Boost()
+    {
+        if(_boosted)
+            return;
+
+        print("boost");
+        _boosted = true;
+
+        _limitVelocity.enabled = false;
+        _temporalBoost = true;
+
+        Invoke("CancelBoost", 2.0f);
+    }
+
+    void CancelBoost()
+    {
+        _limitVelocity.enabled = true;
+        _boosted = false;
+        _rigidBody.drag = Drag;
+    }
+
     void FixedUpdate()
     {
         _rigidBody.AddRelativeForce(_thrustForce);
+
+        if(_temporalBoost)
+        {
+            Vector2 boostForce = _thrustForce.normalized * BoostAmount;
+            _rigidBody.AddRelativeForce(boostForce, ForceMode2D.Impulse);
+            _temporalBoost = false;
+            _rigidBody.drag = Drag * 10.0f;
+        }
     }
 }
