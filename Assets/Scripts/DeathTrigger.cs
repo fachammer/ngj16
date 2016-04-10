@@ -48,7 +48,6 @@ public class DeathTrigger : MonoBehaviour
         yield return new WaitForSeconds(delay);
         var player = incomingGameObject.GetComponent<Player>();
         Assert.IsNotNull(player);
-        print("kill?"+TriggerDeath);
         player.IsDead = TriggerDeath;
         
         var leakedHandler = incomingGameObject.GetComponent<LeakedHandler>();
