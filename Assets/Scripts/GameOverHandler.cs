@@ -11,6 +11,8 @@ public class GameOverHandler : MonoBehaviour
 
     public GameRestartController gameRestartController;
 
+    public AudioSource[] audioSourcesToDeactivate;
+
     private void Awake()
     {
         Assert.IsNotNull(gameOverScreen);
@@ -30,7 +32,12 @@ public class GameOverHandler : MonoBehaviour
         {
             component.enabled = false;
         }
-        
+
+        foreach (var audioSource in audioSourcesToDeactivate)
+        {
+            audioSource.enabled = false;
+        }
+
         gameOverScreen.SetWinningPlayer(winningPlayer);
         gameRestartController.enabled = true;
     }
