@@ -46,6 +46,11 @@ public class GameplayManager : MonoBehaviour
 
     public void EnableAll()
     {
+        foreach (var satellite in GameObject.FindGameObjectsWithTag("Satellite"))
+        {
+            satellite.GetComponentInChildren<RandomMover>().enabled = true;
+        }
+
         foreach (var player in players)
         {
             player.GetComponent<Controlls>().enabled = true;
