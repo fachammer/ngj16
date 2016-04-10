@@ -76,7 +76,7 @@ public class Controlls : MonoBehaviour
             if(Input.GetKey(KeyCode.DownArrow))
                 RightY = 1.0f;
 
-            if(Input.GetKey(KeyCode.RightControl))
+            if(Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.RightCommand))
                 Boost();
         }
         else if(PlayerNumber == PlayerNo.XBOX)
