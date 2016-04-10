@@ -113,7 +113,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a4eb616220687d458533d8bc1ac85b5, type: 3}
   m_Name: 
@@ -133,6 +133,9 @@ MonoBehaviour:
   gameplayManager: {fileID: 11491848}
   gameOverScreen: {fileID: 11479830}
   gameRestartController: {fileID: 0}
+  audioSourcesToDeactivate:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11479830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appearDelay: 1
-  soundDelay: 0.9
+  soundDelay: 1
   winCanvas: {fileID: 0}
   leakImage: {fileID: 0}
   text: {fileID: 0}
@@ -165,6 +168,8 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+  componentsToEnable:
+  - {fileID: 11424994}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
