@@ -37,6 +37,18 @@ public class Controlls : MonoBehaviour
         float RightY = 0.0f;
         float RightX = 0.0f;
 
+        //swap wsad/xbox with boost button
+        if(PlayerNumber == PlayerNo.WSAD)
+        {
+            if(Input.GetButton("Fire1"))
+                PlayerNumber = PlayerNo.XBOX;
+
+        }else if(PlayerNumber == PlayerNo.XBOX)
+        {
+            if(Input.GetKey(KeyCode.E))
+                PlayerNumber = PlayerNo.WSAD;
+        }
+
         if(PlayerNumber == PlayerNo.WSAD)
         {
             if(Input.GetKey(KeyCode.A))
