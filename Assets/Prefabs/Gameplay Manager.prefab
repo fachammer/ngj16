@@ -133,6 +133,9 @@ MonoBehaviour:
   gameplayManager: {fileID: 11491848}
   gameOverScreen: {fileID: 11479830}
   gameRestartController: {fileID: 0}
+  audioSourcesToDeactivate:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11479830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appearDelay: 1
-  soundDelay: 0.9
+  soundDelay: 1
   winCanvas: {fileID: 0}
   leakImage: {fileID: 0}
   text: {fileID: 0}
@@ -165,6 +168,7 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+  componentsToEnable: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
